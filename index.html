@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html dir="ltr" lang="ja-JP">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="img/apple-touch-icon.png" sizes="180x180">
+<link rel="shortcut icon" href="img/favicon.ico">
+<title>新年吼</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/jquery.flipcountdown.css" media="screen,print">
+<link rel="stylesheet" type="text/css" href="css/animate.min.css" media="screen,print">
+<link rel="stylesheet" type="text/css" href="css/csshake.min.css" media="screen,print">
+<link rel="stylesheet" type="text/css" href="css/standard.css" media="screen,print">
+<script type="text/javascript" src="js/prefixfree.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.flipcountdown.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+<div style="margin:0 auto;width:0px;height:0px;overflow:hidden;"><img src="img/apple-touch-icon.png"></div>
+
+<div id="wrapper">
+	
+	<div class="cd">
+		<p>新年倒计时<br>精彩拜年，准点启动</p>
+		<div id="timer"></div>
+	</div>
+	
+	<div id="xnh">
+	<ul class="happy">
+		<li class="w1 animated"><img src="img/txt01_2.png" width="80%" alt="新"><img src="img/txt01.png" width="80%" alt="新"></li>
+		<li class="w2 animated"><img src="img/txt02_2.png" width="80%" alt="年"><img src="img/txt02.png" width="80%" alt="年"></li>
+		<li class="w3 animated"><img src="img/txt03_2.png" width="80%" alt="吼"><img src="img/txt03.png" width="80%" alt="吼"></li>
+		<li class="w4 animated"><img src="img/hou.png" width="90%" alt=""></li>
+		<li class="w5"><a href="pray/"><span>抽取新年签</span></a></li>
+	</ul>
+	
+	
+	<p class="logo animated"><a href="http://betterun.cn/"><img src="img/logo.png" width="80%" alt="倍帝来"></a></p>
+	
+	</div>
+</div>
+
+	<div class="audio-box" style="display: none">
+		<audio id="myaudio" src="img/hou.mp3" controls>
+		你的浏览器不支持HTML5
+		</audio>
+		<input type="button" onclick="document.getElementById('myaudio').play().volume(0.1)" value="播放" id="play-btn" />
+		<input type="button" onclick="document.getElementById('myaudio').pause()" value="停止" id="stop-btn" />
+	</div>
+
+<script type="text/javascript" src="js/ga.js"></script>
+</body>
+
+</html>
