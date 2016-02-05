@@ -5,7 +5,7 @@ $(document).ready(function(){
 	$("#wrapper").height(windH);
 	
 	
-	$('#timer').flipcountdown({
+	$('#🐵').flipcountdown({
 		size:'sm',
 		beforeDateTime:'2/8/2016 00:00:00',
 		callback:function(){
