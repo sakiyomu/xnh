@@ -17,31 +17,39 @@ showDecode = function(){
 
 jumpToDecode = function(){
 	var urls = [
-	"img/安产.jpg", 
-	"img/温柔.jpg", 
-	"img/喜结.jpg", 
-	"img/勤学.jpg", 
-	"img/孤独.jpg", 
-	"img/自由.jpg", 
-	"img/断舍离.jpg", 
-	"img/知足.jpg", 
-	"img/任性.jpg", 
-	"img/白首.jpg", 
-	"img/蜜恋.jpg", 
-	"img/佑儿.jpg", 
-	"img/勇气.jpg", 
-	"img/利事.jpg", 
-	"img/旅行.jpg", 
-	"img/良缘.jpg", 
-	"img/气愈.jpg", 
-	"img/你谢见.jpg", 
-	"img/转运.jpg"
+	"pray/img/安产.jpg", 
+	"pray/img/温柔.jpg", 
+	"pray/img/喜结.jpg", 
+	"pray/img/勤学.jpg", 
+	"pray/img/孤独.jpg", 
+	"pray/img/幸运.jpg", 
+	"pray/img/自由.jpg", 
+	"pray/img/断舍离.jpg", 
+	"pray/img/知足.jpg", 
+	"pray/img/任性.jpg", 
+	"pray/img/白首.jpg", 
+	"pray/img/蜜恋.jpg", 
+	"pray/img/佑儿.jpg", 
+	"pray/img/勇气.jpg", 
+	"pray/img/利事.jpg", 
+	"pray/img/旅行.jpg", 
+	"pray/img/良缘.jpg", 
+	"pray/img/气愈.jpg", 
+	"pray/img/你谢见.jpg", 
+	"pray/img/转运.jpg"
 	];
 	var jumpTo = urls[parseInt(Math.random() * urls.length)];
-	window.location = jumpTo;
+	$(".inner").css({"background":"#F6F6F6 url("+jumpTo+") no-repeat center center", "background-size":"contain"});
+	//window.location = jumpTo;
 }
 
-$('.do').click(start);
+$('.do').click(function(){
+	start();
+	$('#stop-btn').click();
+	$('#play-btn').attr('id', 'play-false');
+	$('.xnh').css('display', 'none');
+});
+
 
 //摇一摇
 $(window).on('deviceorientation', function(e) {
@@ -62,10 +70,10 @@ $(window).on('deviceorientation', function(e) {
 //微信分享  失效了，有时间的可以根据官方公布的 JS-SDK进行开发
 
 var shareMeta = {
-	img_url: "http://pray.jekyllhy.de/thumbnail.gif",
+	img_url: "http://xnh.betterun.cn/img/wx_thumb.png",
 	image_width: 100,
 	image_height: 100,
-	link: 'http://pray.jekyllhy.de/',
+	link: 'http://xnh.betterun.cn/',
 	title: "2016丙申猴，为自己摇枚新年签！",
 	desc: "这是对过去的感悟和对新年的祈望，希望它能为你带来好运...",
 	appid: ''

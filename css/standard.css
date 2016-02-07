@@ -94,7 +94,7 @@ ul.happy li.w2{
 
 ul.happy li.w3{
 	height:			118px;
-	z-index:		999;
+	z-index:		9;
 }
 
 ul.happy li.w4{
@@ -128,6 +128,7 @@ ul.happy li.w5 a{
 	border:			3px solid #cc0000;
 	color:			#fff;
 	text-decoration:	none;
+	cursor:			pointer;
 }
 
 ul.happy li.w5 a span{
@@ -234,4 +235,64 @@ to{opacity:1;transform:none;transform:none}
 15%{transform:rotate(5deg);transform:rotate(5deg)}
 20%{transform:rotate(-5deg);transform:rotate(-5deg)}
 25%,to{transform:rotate(0deg);transform:rotate(0deg)}
+}
+
+
+
+
+
+
+/* 抽签部分的css */
+
+@keyframes play {
+	100%{
+		background-position: -737px -2px;
+	}
+}
+@-webkit-keyframes play {
+	100%{
+		background-position: -737px -2px;
+	}
+}
+.sprite {
+	width:145px;
+	height:300px;
+	display:inline-block;
+	overflow:hidden;
+	background-repeat: no-repeat;
+	background-image:url(../pray/234.png);
+	background-position: -2px -2px;
+	animation: play 0.8s steps(5) infinite;
+	-webkit-animation: play 0.8s steps(5) infinite;
+}
+.preload {
+	background-position: 9999px 9999px;
+	width: 1px;
+	height: 1px;
+	display: none;
+}
+.cover {
+	background: url(../pray/share.png) top right no-repeat;
+	background-size: 50%;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	display: none;
+}
+
+.decode .inner {
+	width: 100%;
+	height: 100%;
+	background: url(../pray/decode.png) center no-repeat;
+	background-size: 80%;
+}
+
+.item {
+	width: 100%;
+	text-align: center;
+	padding-top: 20%;
 }
